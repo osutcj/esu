@@ -143,17 +143,17 @@
   transition: opacity 0.8s ease-in-out;
   display: none;
 
-  img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    display: block;
-  }
-
   &.active {
     opacity: 1;
     display: block;
   }
+}
+
+.slide-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
 }
 
 .slide-arrow {

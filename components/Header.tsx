@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import styles from "./Header.module.scss";
 
 const Header = () => {
@@ -37,9 +38,11 @@ const Header = () => {
       >
         <div className={styles.logo}>
           <Link href="/">
-            <img
+            <Image
               src="/assets/images/Logo-uri/ESU_logo_header.png"
               alt="ESU Logo"
+              width={1080}
+              height={368}
             />
           </Link>
         </div>

@@ -41,6 +41,7 @@
 
   img {
     max-width: 125px;
+    height: auto;
   }
 
   @media (max-width: 900px) {
@@ -48,6 +49,7 @@
 
     img {
       max-width: 120px;
+      height: auto;
     }
   }
 }
@@ -94,6 +96,7 @@
 
   img {
     max-width: 140px;
+    height: auto;
   }
 
   @media (max-width: 900px) {
@@ -103,6 +106,7 @@
 
     img {
       max-width: 100px;
+      height: auto;
     }
   }
 }

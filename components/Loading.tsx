@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import styles from "./Loading.module.scss";
 
 interface LoadingProps {
@@ -21,10 +22,18 @@ const Loading = ({ minDuration = 1500 }: LoadingProps) => {
   if (!shouldRender) return null;
 
   return (
-    <div className={`${styles["loading-wrapper"]}${!isLoading ? ` ${styles["fading-out"]}` : ""}`}>
+    <div
+      className={`${styles["loading-wrapper"]}${!isLoading ? ` ${styles["fading-out"]}` : ""}`}
+    >
       <div className={styles["loader-container"]}>
         <div className={styles["spinner-ring"]} />
-        <img className={styles.logo} src="/assets/images/Logo-uri/ESU_logo.png" alt="Loading..." />
+        <Image
+          className={styles.logo}
+          src="/assets/images/Logo-uri/ESU_logo.png"
+          alt="Loading..."
+          width={368}
+          height={368}
+        />
       </div>
     </div>
   );

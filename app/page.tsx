@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
+import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import styles from "./page.module.scss";
@@ -139,7 +140,7 @@ export default function Home() {
                 key={idx}
                 className={`${styles.slide}${slideIndex === idx ? ` ${styles.active}` : ""}`}
               >
-                <img src={img} alt={`ESU Slide ${idx + 1}`} />
+                <Image src={img} alt={`ESU Slide ${idx + 1}`} width={6000} height={4000} className={styles["slide-img"]} />
               </div>
             ))}
             <a
