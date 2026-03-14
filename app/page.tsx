@@ -1,65 +1,173 @@
-import Image from "next/image";
+"use client";
+import { useState, useEffect, useRef } from "react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import styles from "./page.module.scss";
+
+const slideshowImages = [
+  "/assets/images/Main_Page/1.jpg",
+  "/assets/images/Main_Page/2.jpg",
+  "/assets/images/Main_Page/3.jpg",
+  "/assets/images/Main_Page/4.jpg",
+  "/assets/images/Main_Page/5.jpg",
+  "/assets/images/Main_Page/6.jpg",
+  "/assets/images/Main_Page/7.JPG",
+  "/assets/images/Main_Page/8.jpg",
+];
+
+const useCounter = (end: number, duration: number, start: number = 0) => {
+  const [count, setCount] = useState(start);
+  const countRef = useRef(start);
+  const hasStarted = useRef(false);
+
+  useEffect(() => {
+    if (hasStarted.current) return;
+    hasStarted.current = true;
+    const range = end - start;
+    const step = Math.abs(Math.floor(duration / range));
+    const increment = end > start ? 1 : -1;
+    const timer = setInterval(() => {
+      countRef.current += increment;
+      setCount(countRef.current);
+      if (countRef.current === end) clearInterval(timer);
+    }, step);
+    return () => clearInterval(timer);
+  }, [end, duration, start]);
+
+  return count;
+};
 
 export default function Home() {
+  const [slideIndex, setSlideIndex] = useState(0);
+  const participantsCount = useCounter(2200, 4000, 1700);
+  const volunteersCount = useCounter(700, 4000, 200);
+  const daysCount = useCounter(14, 8000, 0);
+
+  const plusSlides = (n: number) => {
+    let newIndex = slideIndex + n;
+    if (newIndex >= slideshowImages.length) newIndex = 0;
+    if (newIndex < 0) newIndex = slideshowImages.length - 1;
+    setSlideIndex(newIndex);
+  };
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <>
+      <Header />
+      <main className={styles["main-wrap"]}>
+        <section className={styles["hero-section"]}>
+          <h1 className={styles["hero-title"]}>
+            <span className={styles.line1}>ENGINEERING SUMMER</span>
+            <br />
+            <span className={styles.line2}>UNIVERSITY</span>
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+        </section>
+
+        <section className={styles["ce-esu"]}>
+          <h2 className={styles["ce-esu-title"]}>
+            Ce este Engineering Summer University?
+          </h2>
+          <p className={styles["ce-esu-description"]}>
+            Engineering Summer University este o tabără de vară de două
+            săptămâni, destinată elevilor de clasa a XI-a pasionați de domeniile
+            STEM, curioși să exploreze aceste domenii captivante și să trăiască
+            experiența de student într-un mediu dinamic, ieșind din zona de
+            confort.
+            <br />
+            <br />
+            Participanții vor avea parte de un program interactiv și antrenant,
+            ce îmbină teoria cu practica. Pe lângă cursuri susținute de
+            profesori renumiți de la Universitatea Tehnică din Cluj-Napoca,
+            elevii vor lua parte la activități de laborator, punând în aplicare
+            cunoștințele acumulate într-un mod practic și inovator.
+            <br />
+            <br />
+            Dincolo de partea academică, tabăra include și numeroase activități
+            recreative menite să ajute participanții să-și dezvolte abilitățile
+            de comunicare și să se integreze într-un comunitate activă și
+            energică. Cazarea în căminele studențești din Observator le va oferi
+            ocazia de a experimenta viața de campus într-un mod autentic.
+            <br />
+            <br />
+            Dacă încă nu ți-ai făcut planuri pentru perioada 19 iulie - 2
+            august, alătură-te nouă pentru două săptămâni pline de experiențe de
+            neuitat, alături de tineri entuziaști din întreaga țară!
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+        </section>
+
+        <section className={styles["counters-section"]}>
+          <div className={styles["counters-container"]}>
+            <div className={styles["counter-item"]}>
+              <span className={styles["counter-number"]}>
+                {participantsCount}+
+              </span>
+              <span className={styles["counter-label"]}>Participanți</span>
+            </div>
+            <div className={styles["counter-item"]}>
+              <span className={styles["counter-number"]}>
+                {volunteersCount}+
+              </span>
+              <span className={styles["counter-label"]}>Voluntari</span>
+            </div>
+            <div className={styles["counter-item"]}>
+              <span className={styles["counter-number"]}>{daysCount}</span>
+              <span className={styles["counter-label"]}>Zile</span>
+            </div>
+          </div>
+        </section>
+
+        <section className={styles["video-section"]}>
+          <h2 className={styles["video-title"]}>Aftermovie ESU 2024</h2>
+          <div className={styles["video-container"]}>
+            <iframe
+              src="https://www.youtube.com/embed/IkRQNqete7g"
+              frameBorder="0"
+              allowFullScreen
+              title="ESU 2024 Aftermovie"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+          </div>
+        </section>
+
+        <section className={styles["slideshow-section"]}>
+          <section className={styles["ce-esu"]}>
+            <h2 className={styles["ce-esu-title"]}>
+              Iată ce înseamnă să fii participant la ESU
+            </h2>
+          </section>
+          <div className={styles["slideshow-container"]}>
+            {slideshowImages.map((img, idx) => (
+              <div
+                key={idx}
+                className={`${styles.slide}${slideIndex === idx ? ` ${styles.active}` : ""}`}
+              >
+                <img src={img} alt={`ESU Slide ${idx + 1}`} />
+              </div>
+            ))}
+            <a
+              className={`${styles["slide-arrow"]} ${styles.prev}`}
+              onClick={() => plusSlides(-1)}
+            >
+              ❮
+            </a>
+            <a
+              className={`${styles["slide-arrow"]} ${styles.next}`}
+              onClick={() => plusSlides(1)}
+            >
+              ❯
+            </a>
+            <div className={styles["dots-container"]}>
+              {slideshowImages.map((_, idx) => (
+                <span
+                  key={idx}
+                  className={`${styles.dot}${slideIndex === idx ? ` ${styles.active}` : ""}`}
+                  onClick={() => setSlideIndex(idx)}
+                />
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <Footer />
       </main>
-    </div>
+    </>
   );
 }

@@ -1,0 +1,237 @@
+@keyframes slide-in {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  height: 70px;
+  color: #071e46;
+  z-index: 500;
+  transition:
+    background 0.4s ease-in-out,
+    box-shadow 0.4s ease-in-out;
+  font-family: "Poppins", sans-serif;
+
+  &.scrolled {
+    background: #071e46;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+
+  a {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 176px;
+      height: 60px;
+    }
+  }
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin-left: auto;
+  gap: 20px;
+  font-size: 22px;
+  text-decoration: none;
+  padding: 0;
+  margin-right: 5%;
+
+  a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.6s ease-in-out;
+
+    &:hover {
+      color: #fac82d;
+    }
+  }
+
+  li {
+    margin: 0 15px;
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+
+  @media (min-width: 768px) and (max-width: 1050px) {
+    li:not(:last-child) {
+      display: none;
+    }
+  }
+}
+
+.menu-button {
+  cursor: pointer;
+  position: fixed;
+  top: 15px;
+  left: 5%;
+  z-index: 1000;
+  opacity: 1;
+  font-family: "Poppins", sans-serif;
+
+  &:hover .bar {
+    background-color: #fac82d;
+  }
+
+  &.open {
+    .bar-1 {
+      transform: translate(0, 11px) rotate(-45deg);
+    }
+
+    .bar-2 {
+      opacity: 0;
+    }
+
+    .bar-3 {
+      transform: translate(0, -11px) rotate(45deg);
+    }
+  }
+}
+
+.bar {
+  width: 35px;
+  height: 5px;
+  background-color: #ffffff;
+  margin: 6px 0;
+  transition:
+    transform 0.4s,
+    background-color 0.6s ease-in-out,
+    opacity 0.4s;
+}
+
+.sidenav {
+  height: 100vh;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #06265e;
+  overflow: hidden;
+  transition: width 0.5s ease;
+  padding-top: 0;
+  z-index: 500;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &.open {
+    width: 22%;
+
+    @media (max-width: 768px) {
+      width: 100vw;
+    }
+
+    @media (min-width: 768px) and (max-width: 1050px) {
+      width: 35vw;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding-top: 0;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.sidenav-link {
+  padding: 8px 8px 8px 32px;
+  padding-left: 20%;
+  text-decoration: none;
+  font-size: 30px;
+  color: #fac82d;
+  display: block;
+  opacity: 0;
+  transform: translateX(-20px);
+  transition:
+    color 0.4s ease-in-out,
+    opacity 0.3s ease,
+    transform 0.3s ease;
+  white-space: nowrap;
+
+  &.visible {
+    opacity: 1;
+    transform: translateX(0);
+    animation: slide-in 0.4s ease-out forwards;
+
+    &:nth-child(1) { animation-delay: 0s;    transition-delay: 0s; }
+    &:nth-child(2) { animation-delay: 0.05s; transition-delay: 0.05s; }
+    &:nth-child(3) { animation-delay: 0.1s;  transition-delay: 0.1s; }
+    &:nth-child(4) { animation-delay: 0.15s; transition-delay: 0.15s; }
+    &:nth-child(5) { animation-delay: 0.2s;  transition-delay: 0.2s; }
+    &:nth-child(6) { animation-delay: 0.25s; transition-delay: 0.25s; }
+  }
+
+  &:hover {
+    color: #ffffff;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 6vw;
+    padding: 2vh 0;
+    padding-left: 0;
+  }
+}
+
+.sidenav-inscriere {
+  display: none !important;
+
+  @media (max-width: 768px) {
+    display: inline-flex !important;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+    color: #073b7f;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    padding: 20px 30px;
+    font-size: 1.3rem;
+    border-radius: 30px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 30px auto 0 auto;
+    width: fit-content;
+    max-width: 85%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s ease;
+
+    &.visible {
+      opacity: 1;
+      transform: translateX(0);
+      transition-delay: 0.3s;
+    }
+  }
+}
