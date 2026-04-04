@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import ClientLayout from "@/components/ClientLayout";
 import "./globals.css";
 
@@ -92,6 +93,7 @@ export default function RootLayout({
       </head>
       <body className={poppins.variable}>
         <ClientLayout>{children}</ClientLayout>
+        <Analytics />
       </body>
     </html>
   );
