@@ -11,20 +11,26 @@ const Footer = () => {
             href="https://www.utcluj.ro/"
             target="_blank"
             rel="noopener noreferrer"
+            className={styles["logo-link"]}
           >
             <Image
               src="/assets/images/Logo-uri/UTalb.png"
               alt="UT Logo"
-              width={140}
-              height={40}
+              fill
+              className={styles["logo-img"]}
             />
           </a>
-          <a href="https://osut.org/" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://osut.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles["logo-link"]}
+          >
             <Image
               src="/assets/images/Logo-uri/OSUT alb.png"
               alt="OSUT Logo"
-              width={140}
-              height={40}
+              fill
+              className={styles["logo-img"]}
             />
           </a>
         </div>
@@ -61,12 +67,13 @@ const Footer = () => {
           href="https://esu.osut.org/"
           target="_blank"
           rel="noopener noreferrer"
+          className={styles["logo-link-large"]}
         >
           <Image
             src="/assets/images/Logo-uri/ESU_logo.png"
             alt="ESU Logo"
-            width={140}
-            height={140}
+            fill
+            className={styles["logo-img"]}
           />
         </a>
         <div className={styles["footer-contact"]}>

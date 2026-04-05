@@ -132,9 +132,10 @@ export default function Home() {
                 <Image
                   src={img}
                   alt={`ESU Slide ${idx + 1}`}
-                  width={6000}
-                  height={4000}
+                  width={1920}
+                  height={1280}
                   className={styles["slide-img"]}
+                  priority={idx === 0}
                 />
               </div>
             ))}
