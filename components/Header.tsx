@@ -22,10 +22,10 @@ const Header = () => {
     { href: "/", label: "Acasă", external: false },
     { href: "/about", label: "Despre noi", external: false },
     { href: "/echipa", label: "Echipa", external: false },
-    { href: "/esu2025", label: "ESU 2025", external: false },
+    { href: "/esu2026", label: "ESU 2026", external: false },
     { href: "/faq", label: "FAQ", external: false },
     {
-      href: "https://osutcluj.pixieset.com/engineeringsummeruniversity2024/",
+      href: "https://mega.nz/folder/FMI0AAQC#nS9Z07iHl0qte4vJ580rGg",
       label: "Galerie",
       external: true,
     },

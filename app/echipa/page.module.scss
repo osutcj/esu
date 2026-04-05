@@ -1,3 +1,21 @@
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.14;
+  }
+  50% {
+    opacity: 0.28;
+  }
+}
+
+@keyframes drift {
+  from {
+    background-position: 0 0, 24px 10px, 68px 22px, 110px 6px;
+  }
+  to {
+    background-position: 140px 0, 164px 10px, 208px 22px, 250px 6px;
+  }
+}
+
 .hero-section {
   position: relative;
   background-image: url('/assets/images/Banner Page/Echipa.jpg');
@@ -40,18 +58,13 @@
   @media (max-width: 1800px) { font-size: 5.2rem; line-height: 1.3; }
   @media (max-width: 1500px) { font-size: 4.4rem; line-height: 1.3; }
   @media (max-width: 950px) { font-size: 3.8rem; line-height: 1.25; }
-  @media (max-width: 768px) {
-    font-size: 2.6rem;
-    line-height: 1.2;
-    padding: 0 10px;
-  }
+  @media (max-width: 768px) { font-size: 2.6rem; line-height: 1.2; padding: 0 10px; }
 }
 
 .main-wrap {
   background-color: #ffffff;
   margin: 0;
   padding: 0;
-  align-items: center;
 }
 
 .team-section {
@@ -60,7 +73,9 @@
 
 .team-card {
   width: 75vw;
-  background: linear-gradient(145deg, #094b9c, #052d6a);
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(160deg, rgba(40, 32, 90, 0.95), rgba(72, 61, 139, 0.92), rgba(52, 52, 110, 0.95));
   border-radius: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
   display: flex;
@@ -73,7 +88,25 @@
   min-height: 300px;
   flex-wrap: wrap;
   box-sizing: border-box;
-  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle, rgba(255, 255, 255, 0.9) 0 1px, transparent 1.4px),
+      radial-gradient(circle, rgba(196, 181, 253, 0.7) 0 0.8px, transparent 1.2px),
+      radial-gradient(circle, rgba(147, 197, 253, 0.72) 0 1px, transparent 1.4px);
+    background-size: 180px 60px;
+    opacity: 0.12;
+    pointer-events: none;
+    animation: twinkle 6.5s ease-in-out infinite, drift 26s linear infinite;
+  }
+
+  > * {
+    position: relative;
+    z-index: 1;
+  }
 
   &:hover {
     transform: scale(1.05);
@@ -147,6 +180,7 @@
 
 .right-section {
   width: 40%;
+  padding-left: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -165,7 +199,7 @@
 
   h3 {
     font-size: 1.3rem;
-    color: #fac82d;
+    color: #FAC82D;
     margin-bottom: 5%;
     margin-top: -10px;
     font-family: 'Poppins', sans-serif;
@@ -174,6 +208,7 @@
 
   p {
     font-size: 1.1rem;
+    opacity: 1;
     font-family: 'Poppins', sans-serif;
     text-align: justify;
   }

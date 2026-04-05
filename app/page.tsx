@@ -6,14 +6,14 @@ import Footer from "@/components/Footer";
 import styles from "./page.module.scss";
 
 const slideshowImages = [
-  "/assets/images/Main_Page/1.jpg",
-  "/assets/images/Main_Page/2.jpg",
-  "/assets/images/Main_Page/3.jpg",
-  "/assets/images/Main_Page/4.jpg",
-  "/assets/images/Main_Page/5.jpg",
-  "/assets/images/Main_Page/6.jpg",
-  "/assets/images/Main_Page/7.JPG",
-  "/assets/images/Main_Page/8.jpg",
+  "/assets/images/Main Page/1.jpg",
+  "/assets/images/Main Page/2.jpg",
+  "/assets/images/Main Page/3.jpg",
+  "/assets/images/Main Page/4.jpg",
+  "/assets/images/Main Page/5.jpg",
+  "/assets/images/Main Page/6.jpg",
+  "/assets/images/Main Page/7.JPG",
+  "/assets/images/Main Page/8.jpg",
 ];
 
 const useCounter = (end: number, duration: number, start: number = 0) => {
@@ -51,6 +51,10 @@ export default function Home() {
     setSlideIndex(newIndex);
   };
 
+  const goToSlide = (index: number) => {
+    setSlideIndex(index);
+  };
+
   return (
     <>
       <Header />
@@ -68,30 +72,17 @@ export default function Home() {
             Ce este Engineering Summer University?
           </h2>
           <p className={styles["ce-esu-description"]}>
-            Engineering Summer University este o tabără de vară de două
-            săptămâni, destinată elevilor de clasa a XI-a pasionați de domeniile
-            STEM, curioși să exploreze aceste domenii captivante și să trăiască
-            experiența de student într-un mediu dinamic, ieșind din zona de
-            confort.
+            Prin proiectul Engineering Summer University, aflat la a XII-a
+            ediție, Organizația Studenților din Universitatea Tehnică din
+            Cluj-Napoca îți oferă ocazia să experimentezi viața de student
+            într-un mod interactiv și plin de distracție! Timp de 2 săptămâni,
+            poți participa la cursuri și ateliere.
             <br />
             <br />
-            Participanții vor avea parte de un program interactiv și antrenant,
-            ce îmbină teoria cu practica. Pe lângă cursuri susținute de
-            profesori renumiți de la Universitatea Tehnică din Cluj-Napoca,
-            elevii vor lua parte la activități de laborator, punând în aplicare
-            cunoștințele acumulate într-un mod practic și inovator.
-            <br />
-            <br />
-            Dincolo de partea academică, tabăra include și numeroase activități
-            recreative menite să ajute participanții să-și dezvolte abilitățile
-            de comunicare și să se integreze într-un comunitate activă și
-            energică. Cazarea în căminele studențești din Observator le va oferi
-            ocazia de a experimenta viața de campus într-un mod autentic.
-            <br />
-            <br />
-            Dacă încă nu ți-ai făcut planuri pentru perioada 19 iulie - 2
-            august, alătură-te nouă pentru două săptămâni pline de experiențe de
-            neuitat, alături de tineri entuziaști din întreaga țară!
+            Înveți să lucrezi în echipă, explorezi campusul universitar și
+            descoperi cum este să înveți alături de viitorii tăi colegi. Pe
+            lângă toate acestea, te așteaptă și multe activități distractive,
+            jocuri, seri tematice și momente de neuitat alături de oameni faini.
           </p>
         </section>
 
@@ -117,30 +108,34 @@ export default function Home() {
         </section>
 
         <section className={styles["video-section"]}>
-          <h2 className={styles["video-title"]}>Aftermovie ESU 2024</h2>
+          <h2 className={styles["video-title"]}>Aftermovie ESU 2025</h2>
           <div className={styles["video-container"]}>
-            <iframe
-              src="https://www.youtube.com/embed/IkRQNqete7g"
-              frameBorder="0"
-              allowFullScreen
-              title="ESU 2024 Aftermovie"
-            />
+            <video controls width="100%" height="100%">
+              <source src="/videos/aftermovie2025.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
         </section>
 
         <section className={styles["slideshow-section"]}>
-          <section className={styles["ce-esu"]}>
+          <div className={styles["ce-esu"]}>
             <h2 className={styles["ce-esu-title"]}>
               Iată ce înseamnă să fii participant la ESU
             </h2>
-          </section>
+          </div>
           <div className={styles["slideshow-container"]}>
             {slideshowImages.map((img, idx) => (
               <div
                 key={idx}
                 className={`${styles.slide}${slideIndex === idx ? ` ${styles.active}` : ""}`}
               >
-                <Image src={img} alt={`ESU Slide ${idx + 1}`} width={6000} height={4000} className={styles["slide-img"]} />
+                <Image
+                  src={img}
+                  alt={`ESU Slide ${idx + 1}`}
+                  width={6000}
+                  height={4000}
+                  className={styles["slide-img"]}
+                />
               </div>
             ))}
             <a
@@ -160,7 +155,7 @@ export default function Home() {
                 <span
                   key={idx}
                   className={`${styles.dot}${slideIndex === idx ? ` ${styles.active}` : ""}`}
-                  onClick={() => setSlideIndex(idx)}
+                  onClick={() => goToSlide(idx)}
                 />
               ))}
             </div>

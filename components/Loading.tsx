@@ -16,6 +16,7 @@ const Loading = ({ minDuration = 1500 }: LoadingProps) => {
       setIsLoading(false);
       setTimeout(() => setShouldRender(false), 500);
     }, minDuration);
+
     return () => clearTimeout(timer);
   }, [minDuration]);
 
@@ -23,17 +24,18 @@ const Loading = ({ minDuration = 1500 }: LoadingProps) => {
 
   return (
     <div
-      className={`${styles["loading-wrapper"]}${!isLoading ? ` ${styles["fading-out"]}` : ""}`}
+      className={`${styles["loading-wrapper"]}${!isLoading ? ` ${styles["fade-out"]}` : ""}`}
     >
       <div className={styles["loader-container"]}>
         <div className={styles["spinner-ring"]} />
-        <Image
-          className={styles.logo}
-          src="/assets/images/Logo-uri/ESU_logo.png"
-          alt="Loading..."
-          width={368}
-          height={368}
-        />
+        <div className={styles.logo}>
+          <Image
+            src="/assets/images/Logo-uri/ESU_logo.png"
+            alt="Loading..."
+            width={120}
+            height={120}
+          />
+        </div>
       </div>
     </div>
   );
