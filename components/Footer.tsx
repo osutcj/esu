@@ -56,7 +56,7 @@ const Footer = () => {
           >
             <i className="fab fa-tiktok"></i>
           </a>
-          <a href="mailto:esu.osutcluj@gmail.com">
+          <a href="mailto:esu@osutcluj.com">
             <i className="fas fa-envelope"></i>
           </a>
         </div>
