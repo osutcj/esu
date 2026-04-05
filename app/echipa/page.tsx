@@ -133,6 +133,9 @@ export default function Echipa() {
               <div className={styles["extra-right-section"]}>
                 <Image src={member.icon} alt="Icon" width={250} height={250} />
               </div>
+              <div className={styles["extra-mobile-icon"]}>
+                <Image src={member.icon} alt="Icon" width={160} height={160} />
+              </div>
             </div>
           ))}
         </section>

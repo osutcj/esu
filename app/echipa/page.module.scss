@@ -245,6 +245,7 @@
   }
 }
 
+
 .extra-right-section {
   width: 30%;
   display: flex;
@@ -258,5 +259,24 @@
 
   @media (max-width: 950px) {
     display: none;
+  }
+}
+
+.extra-mobile-icon {
+  display: none;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 18px;
+
+  img {
+    width: 120px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+
+  @media (max-width: 950px) {
+    display: flex;
   }
 }
