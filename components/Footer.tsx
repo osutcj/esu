@@ -11,11 +11,27 @@ const Footer = () => {
             href="https://www.utcluj.ro/"
             target="_blank"
             rel="noopener noreferrer"
+            className={styles["logo-link"]}
           >
-            <Image src="/assets/images/Logo-uri/UTalb.png" alt="UT Logo" width={4382} height={1317} />
+            <Image
+              src="/assets/images/Logo-uri/UTalb.png"
+              alt="UT Logo"
+              fill
+              className={styles["logo-img"]}
+            />
           </a>
-          <a href="https://osut.org/" target="_blank" rel="noopener noreferrer">
-            <Image src="/assets/images/Logo-uri/OSUT alb.png" alt="OSUT Logo" width={1920} height={1081} />
+          <a
+            href="https://osut.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles["logo-link"]}
+          >
+            <Image
+              src="/assets/images/Logo-uri/OSUT alb.png"
+              alt="OSUT Logo"
+              fill
+              className={styles["logo-img"]}
+            />
           </a>
         </div>
         <div className={styles["footer-social"]}>
@@ -51,31 +67,39 @@ const Footer = () => {
           href="https://esu.osut.org/"
           target="_blank"
           rel="noopener noreferrer"
+          className={styles["logo-link-large"]}
         >
-          <Image src="/assets/images/Logo-uri/ESU_logo.png" alt="ESU Logo" width={368} height={368} />
+          <Image
+            src="/assets/images/Logo-uri/ESU_logo.png"
+            alt="ESU Logo"
+            fill
+            className={styles["logo-img"]}
+          />
         </a>
         <div className={styles["footer-contact"]}>
           <h3>Contact:</h3>
           <p>
-            <b>Orțan Adela - Responsabil BC</b>
+            <b>Vlad Cosmin Ormindean - Responsabil BC</b>
           </p>
           <p>
-            Număr de telefon: <i>0754273202</i>
-          </p>
-          <p>
-            Email:{" "}
-            <a href="mailto:adelalorena16@gmail.com">adelalorena16@gmail.com</a>
-          </p>
-          <p>
-            <b>Florea Alexandru - Coordonator</b>
-          </p>
-          <p>
-            Număr de telefon: <i>0728020039</i>
+            Număr de telefon: <i> 0743135003</i>
           </p>
           <p>
             Email:{" "}
-            <a href="mailto:alexandruflorea2004@gmail.com">
-              alexandruflorea2004@gmail.com
+            <a href="mailto:vlad.ormindean@osutcluj.com">
+              vlad.ormindean@osutcluj.com
+            </a>
+          </p>
+          <p>
+            <b>Călin-Bogdan Secară - Coordonator</b>
+          </p>
+          <p>
+            Număr de telefon: <i>0734785227</i>
+          </p>
+          <p>
+            Email:{" "}
+            <a href="mailto:calin.secara@osutcluj.com">
+              calin.secara@osutcluj.com
             </a>
           </p>
         </div>

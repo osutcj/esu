@@ -20,6 +20,10 @@ export default function DespreNoi() {
     setSlideIndex(newIndex);
   };
 
+  const goToSlide = (index: number) => {
+    setSlideIndex(index);
+  };
+
   return (
     <>
       <Header />
@@ -33,34 +37,45 @@ export default function DespreNoi() {
             <b className={styles["responsive-highlight"]}>
               Engineering Summer University
             </b>{" "}
-            este o tabără de 2 săptămâni dedicată elevilor de clasa a 11-a.
-            Organizat de OSUT Cluj și aflat la a 11-a ediție, scopul proiectului
-            este acela de a oferi participanților experiența cât mai veritabilă
-            de student.
+            nu este doar o simplă tabără de vară, ci o experiență care îți
+            schimbă ritmul, perspectiva și, poate, chiar planurile de viitor.
+            Timp de două săptămâni, ieși din rutina de zi cu zi și intri într-un
+            mediu complet nou, unde fiecare zi aduce ceva diferit. Alături de
+            elevi de clasa a XI-a din toată țara, ajungi să faci parte dintr-o
+            comunitate plină de energie, curiozitate și dorință de a descoperi
+            mai mult.
             <br />
             <br />
-            Pregătește-te pentru un program captivant, unde vei învăța prin
-            experiență! Vei participa la cursuri interesante și laboratoare
-            hands-on, susținute de profesori de top de la Universitatea Tehnică
-            din Cluj-Napoca. Fiecare activitate te va provoca să gândești
-            creativ și tehnic, oferindu-ți oportunitatea de a pune în practică
-            ceea ce înveți într-un mod inovator și, de ce nu, distractiv.
+            Pe parcursul acestor zile, vei simți cum e să trăiești ca un
+            student: vei sta în cămin, vei împărți experiențe cu oameni noi și
+            vei lega prietenii care, adesea, continuă și după finalul taberei.
+            Atmosfera de campus, serile petrecute împreună, glumele, provocările
+            și momentele spontane sunt cele care transformă totul într-o
+            amintire de neuitat.
+            <br />
+            <br />
+            Activitățile sunt gândite astfel încât să te facă să-ți depășești
+            zona de confort și să descoperi că poți mai mult decât credeai. De
+            la cursuri și laboratoare unde explorezi latura tehnică, până la
+            activități recreative care îți testează creativitatea și spiritul de
+            echipă, fiecare moment este o ocazie de a învăța ceva despre tine și
+            despre lumea din jur.
           </p>
         </section>
 
         <div className={styles["video-background"]}>
           <p className={styles["ce-esu-description-2"]}>
-            Dar ESU nu înseamnă doar învățat! Pe lângă experiențele
-            educaționale, te așteaptă activități de echipă, provocări captivante
-            și seri tematice, toate menite să îți dezvolte abilitățile sociale
-            și să creeze prietenii care pot dura o viață. Cazarea în căminele
-            campusului îți va oferi o experiență autentică de viață de student.
+            Dincolo de toate acestea, ESU este despre oameni. Voluntarii noștri
+            sunt acolo să te ghideze, să te susțină și să se asigure că ai parte
+            de cea mai tare vară. Ei sunt cei care dau viață acestui proiect și
+            care, prin pasiunea lor, reușesc să creeze un spațiu unde fiecare se
+            simte binevenit.
             <br />
             <br />
-            Nu ai planuri pentru vară? ESU este locul ideal unde poți învăța, te
-            poți distra și poți construi fundamentul unui viitor de succes! Vino
-            să explorezi ingineria într-un mod inedit și să creezi amintiri de
-            neuitat alături de o echipă de tineri pasionați!
+            Dacă ești gata pentru o aventură care îmbină distracția cu
+            cunoașterea, Engineering Summer University este locul unde trebuie
+            să fii. Vino să trăiești experiența de student și să vezi cum e să
+            faci parte dintr-o echipă care nu se oprește niciodată din explorat!
           </p>
           <h2 className={styles["ce-esu-motto"]}>
             Dive into the journey of a lifetime!
@@ -79,7 +94,13 @@ export default function DespreNoi() {
               key={idx}
               className={`${styles.slide}${slideIndex === idx ? ` ${styles.active}` : ""}`}
             >
-              <Image src={img} alt={`Testimonial ${idx + 1}`} width={5625} height={3334} className={styles["slide-img"]} />
+              <Image
+                src={img}
+                alt={`Testimonial ${idx + 1}`}
+                width={5625}
+                height={3334}
+                className={styles["slide-img"]}
+              />
             </div>
           ))}
           <a
@@ -99,7 +120,7 @@ export default function DespreNoi() {
               <span
                 key={idx}
                 className={`${styles.dot}${slideIndex === idx ? ` ${styles.active}` : ""}`}
-                onClick={() => setSlideIndex(idx)}
+                onClick={() => goToSlide(idx)}
               />
             ))}
           </div>

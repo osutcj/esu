@@ -1,3 +1,21 @@
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.14;
+  }
+  50% {
+    opacity: 0.28;
+  }
+}
+
+@keyframes drift {
+  from {
+    background-position: 0 0, 24px 10px, 68px 22px, 110px 6px;
+  }
+  to {
+    background-position: 140px 0, 164px 10px, 208px 22px, 250px 6px;
+  }
+}
+
 .hero-section {
   position: relative;
   background-image: url('/assets/images/Banner Page/MainPage.jpg');
@@ -89,10 +107,43 @@
 }
 
 .counters-section {
-  background: #073b7f;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(160deg, rgba(40, 32, 90, 0.95), rgba(72, 61, 139, 0.92), rgba(52, 52, 110, 0.95));
   color: white;
   padding: 50px 20px;
   margin-bottom: 1.5%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle, rgba(255, 255, 255, 0.9) 0 1px, transparent 1.4px),
+      radial-gradient(circle, rgba(196, 181, 253, 0.7) 0 0.8px, transparent 1.2px),
+      radial-gradient(circle, rgba(147, 197, 253, 0.72) 0 1px, transparent 1.4px),
+      radial-gradient(circle, rgba(255, 255, 255, 0.55) 0 0.7px, transparent 1px);
+    background-size: 180px 60px;
+    opacity: 0.18;
+    pointer-events: none;
+    animation: twinkle 6.5s ease-in-out infinite, drift 26s linear infinite;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(90deg, rgba(167, 139, 250, 0.1), transparent 35%, transparent 65%, rgba(96, 165, 250, 0.1)),
+      radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.08), transparent 0 16%),
+      radial-gradient(circle at 78% 40%, rgba(167, 139, 250, 0.08), transparent 0 18%);
+    pointer-events: none;
+  }
+
+  > * {
+    position: relative;
+    z-index: 1;
+  }
 }
 
 .counters-container {
@@ -136,8 +187,41 @@
 }
 
 .video-section {
-  background-color: #073b7f;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(160deg, rgba(15, 12, 41, 0.98), rgba(48, 43, 99, 0.96), rgba(36, 36, 62, 0.98));
   padding: 3vh 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle, rgba(255, 255, 255, 0.9) 0 1px, transparent 1.4px),
+      radial-gradient(circle, rgba(196, 181, 253, 0.7) 0 0.8px, transparent 1.2px),
+      radial-gradient(circle, rgba(147, 197, 253, 0.72) 0 1px, transparent 1.4px),
+      radial-gradient(circle, rgba(255, 255, 255, 0.55) 0 0.7px, transparent 1px);
+    background-size: 180px 60px;
+    opacity: 0.18;
+    pointer-events: none;
+    animation: twinkle 6.5s ease-in-out infinite, drift 26s linear infinite;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(90deg, rgba(167, 139, 250, 0.1), transparent 35%, transparent 65%, rgba(96, 165, 250, 0.1)),
+      radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.08), transparent 0 16%),
+      radial-gradient(circle at 78% 40%, rgba(167, 139, 250, 0.08), transparent 0 18%);
+    pointer-events: none;
+  }
+
+  > * {
+    position: relative;
+    z-index: 1;
+  }
 }
 
 .video-title {
@@ -154,19 +238,19 @@
 .video-container {
   position: relative;
   padding-bottom: 56.25%;
-  padding-top: 4vh;
   height: 0;
   overflow: hidden;
   margin: 0 auto 8vh auto;
-  max-width: 80vw;
+  max-width: 70vw;
   border-radius: 15px;
 
-  iframe {
+  iframe, video {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    object-fit: cover;
   }
 }
 
