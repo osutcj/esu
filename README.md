@@ -4,7 +4,7 @@ Official website for **Engineering Summer University (ESU)**, a two-week summer 
 
 ## Tech Stack
 
-- **Framework:** Next.js 15+ (App Router)
+- **Framework:** Next.js 16+ (App Router)
 - **Library:** React 19
 - **Language:** TypeScript
 - **Styling:** SCSS Modules & styled-components v6
