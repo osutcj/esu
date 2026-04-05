@@ -4,9 +4,10 @@ Official website for **Engineering Summer University (ESU)**, a two-week summer 
 
 ## Tech Stack
 
-- **Framework:** Next.js 15 (App Router)
+- **Framework:** Next.js 16+ (App Router)
+- **Library:** React 19
 - **Language:** TypeScript
-- **Styling:** styled-components v6
+- **Styling:** SCSS Modules & styled-components v6
 - **Fonts:** Poppins (via next/font/google)
 - **Icons:** Font Awesome 6
 
@@ -17,8 +18,15 @@ Official website for **Engineering Summer University (ESU)**, a two-week summer 
 | `/` | Home page with hero, about section, counters, video, and slideshow |
 | `/about` | About page with description and testimonials slideshow |
 | `/echipa` | Meet the ESU team |
-| `/esu2025` | ESU 2025 edition info with FAQ and documents |
+| `/esu2026` | ESU 2026 edition info with FAQ and documents |
 | `/faq` | Frequently asked questions |
+
+## Recent Optimizations
+
+- **Image Preloading:** All carousel images are preloaded with `priority` for instant, smooth transitions.
+- **Responsive Layouts:** Implemented "no-stretch" logo containers in the footer using `fill` and `object-fit: contain`.
+- **Media Fixes:** Corrected ESU 2025 aftermovie orientation and controls through permanent video re-encoding.
+- **SEO & Performance:** Optimized image dimensions (1920x1280) and updated sitemap for the 2026 edition.
 
 ## Getting Started
 
@@ -39,26 +47,27 @@ npm start
 ## Project Structure
 
 ```
-src/
-├── app/
+.
+├── app/                  # App Router pages and layouts
 │   ├── layout.tsx        # Root layout (metadata, fonts, styled-components registry)
 │   ├── globals.css       # Global styles
 │   ├── page.tsx          # Home page
 │   ├── echipa/page.tsx   # Team page
-│   ├── esu2025/page.tsx  # ESU 2025 page
+│   ├── esu2026/page.tsx  # ESU 2026 page
 │   ├── faq/page.tsx      # FAQ page
 │   └── about/page.tsx    # About page
-├── components/
+├── components/           # Reusable UI components
 │   ├── Header.tsx
 │   ├── Footer.tsx
 │   ├── Loading.tsx
 │   └── ClientLayout.tsx
-└── lib/
-    └── registry.tsx      # styled-components SSR registry
+├── lib/                  # Utilities and registries
+│   └── registry.tsx      # styled-components SSR registry
+└── public/               # Static assets (images, videos, documents)
 ```
 
 ## About ESU
 
-Engineering Summer University brings together over 2,200+ students and 700+ volunteers across 14+ editions. Participants experience university life at [UTCN](https://www.utcluj.ro/), attending lectures, labs, and recreational activities.
+Engineering Summer University brings together over 2,200+ students and 700+ volunteers across its editions. In its 12th year, participants experience university life at [UTCN](https://www.utcluj.ro/), attending lectures, labs, and recreational activities.
 
 **Website:** [esu.osut.org](https://esu.osut.org/)
