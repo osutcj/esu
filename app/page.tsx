@@ -135,7 +135,7 @@ export default function Home() {
                   width={1920}
                   height={1280}
                   className={styles["slide-img"]}
-                  priority={idx === 0}
+                  priority={true}
                 />
               </div>
             ))}
