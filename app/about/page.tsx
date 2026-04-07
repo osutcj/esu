@@ -82,7 +82,7 @@ export default function DespreNoi() {
           </h2>
         </div>
 
-        <section className={styles["ce-esu"]}>
+        {/*<section className={styles["ce-esu"]}>
           <h2 className={styles["ce-esu-title"]}>
             Uite ce au zis foștii participanți despre ESU
           </h2>
@@ -94,15 +94,15 @@ export default function DespreNoi() {
               key={idx}
               className={`${styles.slide}${slideIndex === idx ? ` ${styles.active}` : ""}`}
             >
-              <Image
+           <Image
                 src={img}
                 alt={`Testimonial ${idx + 1}`}
                 width={5625}
                 height={3334}
-                className={styles["slide-img"]}
+                className={styles["slide-img"]} 
               />
             </div>
-          ))}
+        ))}
           <a
             className={`${styles["slide-arrow"]} ${styles.prev}`}
             onClick={() => plusSlides(-1)}
@@ -124,7 +124,7 @@ export default function DespreNoi() {
               />
             ))}
           </div>
-        </div>
+        </div>*/}
 
         <Footer />
       </main>
