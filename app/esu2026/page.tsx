@@ -13,7 +13,7 @@ const faqData = [
   {
     question: "Cum te înscrii la ESU?",
     answer:
-      "Înscrierea la tabăra de vară se face foarte ușor! Tot ce trebuie să faci este să completezi formularul disponibil pe site-ul nostru în perioada 13 aprilie - 3 mai. După înscriere, urmează următoarele etape:\n\n- Liste inițiale: 17 mai\n- Confirmări runda 1: 17-19 mai\n- Redistribuirea locurilor: 21 mai\n- Confirmări runda 2: 21-23 mai\n- Liste finale: 24 mai",
+      "Înscrierea la tabăra de vară se face foarte ușor! Tot ce trebuie să faci este să completezi formularul disponibil pe site-ul nostru în perioada 13 aprilie - 3 mai. După înscriere, urmează următoarele etape:\n\n- Liste inițiale: 10 mai\n- Confirmări runda 1: 10-12 mai\n- Redistribuirea locurilor: 14 mai\n- Confirmări runda 2: 14-16 mai\n- Liste finale: 17 mai",
   },
   {
     question: "Acte necesare pentru înscriere",
