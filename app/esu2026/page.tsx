@@ -73,11 +73,21 @@ export default function ESU2026() {
       <Header />
       <main className={styles["main-wrap"]}>
         <section className={styles["hero-section"]}>
-          <h1 className={styles["hero-title"]}>
-            <span className={styles.line1}>ESU 2026</span>
-            <br />
-            <span className={styles.line2}>18 IULIE - 1 AUGUST</span>
-          </h1>
+          <div className={styles.heroContent}>
+            <h1 className={styles["hero-title"]}>
+              <span className={styles.line1}>ESU 2026</span>
+              <br />
+              <span className={styles.line2}>18 IULIE - 1 AUGUST</span>
+            </h1>
+            <a
+              href="https://forms.gle/wZo9khhUAR8KRS5J8"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.heroCta}
+            >
+              INSCRIE-TE ACUM
+            </a>
+          </div>
         </section>
 
         <section className={styles["faq-section"]}>
