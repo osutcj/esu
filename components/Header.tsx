@@ -46,35 +46,16 @@ const Header = () => {
             />
           </Link>
         </div>
-        <ul className={styles["nav-links"]}>
-          <li>
-            <a
-              href="https://www.facebook.com/engineering.summer.university"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="fab fa-facebook-f"></i>
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.instagram.com/engineering.summer.university/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="fab fa-instagram"></i>
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.tiktok.com/@esu.osut"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="fab fa-tiktok"></i>
-            </a>
-          </li>
-        </ul>
+        <div className={styles.ctaWrapper}>
+          <a
+            href="https://forms.gle/wZo9khhUAR8KRS5J8"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.ctaButton}
+          >
+            Înscrie-te acum
+          </a>
+        </div>
       </nav>
 
       <div
