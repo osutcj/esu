@@ -91,12 +91,12 @@ const Header = () => {
           ),
         )}
         <a
-          href="/assets/documente/Liste finale.pdf"
+          href="https://forms.gle/wZo9khhUAR8KRS5J8"
           target="_blank"
           rel="noopener noreferrer"
           className={`${styles["sidenav-inscriere"]}${isOpen ? ` ${styles.visible}` : ""}`}
         >
-          Liste finale
+          Înscrie-te acum
         </a>
       </div>
     </>
