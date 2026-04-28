@@ -6,8 +6,8 @@ import Footer from "@/components/Footer";
 import styles from "./page.module.scss";
 
 const testimonialImages = [
-  "/assets/images/Testimoniale/testimoniale-01.png",
-  "/assets/images/Testimoniale/testimoniale-02.png",
+  "/assets/images/Testimoniale/testimoniale-01.webp",
+  "/assets/images/Testimoniale/testimoniale-02.webp",
 ];
 
 export default function DespreNoi() {

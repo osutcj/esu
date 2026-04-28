@@ -6,14 +6,14 @@ import Footer from "@/components/Footer";
 import styles from "./page.module.scss";
 
 const slideshowImages = [
-  "/assets/images/Main Page/1.jpg",
-  "/assets/images/Main Page/2.jpg",
-  "/assets/images/Main Page/3.jpg",
-  "/assets/images/Main Page/4.jpg",
-  "/assets/images/Main Page/5.jpg",
-  "/assets/images/Main Page/6.jpg",
-  "/assets/images/Main Page/7.JPG",
-  "/assets/images/Main Page/8.jpg",
+  "/assets/images/Main Page/1.webp",
+  "/assets/images/Main Page/2.webp",
+  "/assets/images/Main Page/3.webp",
+  "/assets/images/Main Page/4.webp",
+  "/assets/images/Main Page/5.webp",
+  "/assets/images/Main Page/6.webp",
+  "/assets/images/Main Page/7.webp",
+  "/assets/images/Main Page/8.webp",
 ];
 
 const useCounter = (end: number, duration: number, start: number = 0) => {

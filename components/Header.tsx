@@ -39,7 +39,7 @@ const Header = () => {
         <div className={styles.logo}>
           <Link href="/">
             <Image
-              src="/assets/images/Logo-uri/ESU_logo_header.png"
+              src="/assets/images/Logo-uri/ESU_logo_header.webp"
               alt="ESU Logo"
               width={1080}
               height={368}

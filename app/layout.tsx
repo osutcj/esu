@@ -51,7 +51,7 @@ export const metadata: Metadata = {
       "Tabără de vară STEM de două săptămâni pentru elevi de clasa a XI-a, organizată de OSUT Cluj la UTCN.",
     images: [
       {
-        url: "/assets/images/Logo-uri/ESU_logo.png",
+        url: "/assets/images/Logo-uri/ESU_logo.webp",
         width: 368,
         height: 368,
         alt: "ESU Logo",
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     title: "ESU - Engineering Summer University",
     description:
       "Tabără de vară STEM de două săptămâni pentru elevi de clasa a XI-a, organizată de OSUT Cluj la UTCN.",
-    images: ["/assets/images/Logo-uri/ESU_logo.png"],
+    images: ["/assets/images/Logo-uri/ESU_logo.webp"],
   },
   robots: {
     index: true,

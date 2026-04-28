@@ -14,7 +14,7 @@ const Footer = () => {
             className={styles["logo-link"]}
           >
             <Image
-              src="/assets/images/Logo-uri/UTalb.png"
+              src="/assets/images/Logo-uri/UTalb.webp"
               alt="UT Logo"
               fill
               className={styles["logo-img"]}
@@ -27,7 +27,7 @@ const Footer = () => {
             className={styles["logo-link"]}
           >
             <Image
-              src="/assets/images/Logo-uri/OSUT alb.png"
+              src="/assets/images/Logo-uri/OSUT alb.webp"
               alt="OSUT Logo"
               fill
               className={styles["logo-img"]}
@@ -70,7 +70,7 @@ const Footer = () => {
           className={styles["logo-link-large"]}
         >
           <Image
-            src="/assets/images/Logo-uri/ESU_logo.png"
+            src="/assets/images/Logo-uri/ESU_logo.webp"
             alt="ESU Logo"
             fill
             className={styles["logo-img"]}

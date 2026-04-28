@@ -30,7 +30,7 @@ const Loading = ({ minDuration = 1500 }: LoadingProps) => {
         <div className={styles["spinner-ring"]} />
         <div className={styles.logo}>
           <Image
-            src="/assets/images/Logo-uri/ESU_logo.png"
+            src="/assets/images/Logo-uri/ESU_logo.webp"
             alt="Loading..."
             width={120}
             height={120}

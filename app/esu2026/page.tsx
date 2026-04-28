@@ -20,7 +20,7 @@ const faqData = [
     answer: `1. Formularul de înscriere de la adresa esu.osut.org (completat online)
 2. Adeverință din partea instituției de învățământ care atestă calitatea de elev în clasa a XI-a a aplicantului
 3. Regulamentul prezent semnat de către participant și reprezentantul legal al acestuia pe fiecare pagină și scanat
-4. Fotografie de profil (format .jpeg ¾, asigurându-vă că fotografia este clară și că fața este vizibilă)
+4. Fotografie de profil (format .webp ¾, asigurându-vă că fotografia este clară și că fața este vizibilă)
 5. Formular de acord a prelucrării datelor cu caracter personal (GDPR)
 6. Diplome care să ateste activitatea extracurriculară din perioada liceului menționată în formular
 7. Copie după buletin
