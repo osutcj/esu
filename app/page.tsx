@@ -110,10 +110,15 @@ export default function Home() {
         <section className={styles["video-section"]}>
           <h2 className={styles["video-title"]}>Aftermovie ESU 2025</h2>
           <div className={styles["video-container"]}>
-            <video controls width="100%" height="100%">
-              <source src="/videos/aftermovie2025.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/Ms5TDb9vrJE"
+              title="YouTube video player"
+              style={{ border: 0 }}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            ></iframe>
           </div>
         </section>
 
