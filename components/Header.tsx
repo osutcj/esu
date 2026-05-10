@@ -48,12 +48,11 @@ const Header = () => {
         </div>
         <div className={styles.ctaWrapper}>
           <a
-            href="https://forms.gle/wZo9khhUAR8KRS5J8"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/assets/documente/Liste inițiale.pdf"
+            download
             className={styles.ctaButton}
           >
-            Înscrie-te acum
+            Liste inițiale
           </a>
         </div>
       </nav>
@@ -91,12 +90,11 @@ const Header = () => {
           ),
         )}
         <a
-          href="https://forms.gle/wZo9khhUAR8KRS5J8"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="/assets/documente/Liste inițiale.pdf"
+          download
           className={`${styles["sidenav-inscriere"]}${isOpen ? ` ${styles.visible}` : ""}`}
         >
-          Înscrie-te acum
+          Liste inițiale
         </a>
       </div>
     </>

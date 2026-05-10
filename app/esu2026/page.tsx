@@ -13,7 +13,7 @@ const faqData = [
   {
     question: "Cum te înscrii la ESU?",
     answer:
-      "Înscrierea la tabăra de vară se face foarte ușor! Tot ce trebuie să faci este să completezi formularul disponibil pe site-ul nostru în perioada 13 aprilie - 3 mai. După înscriere, urmează următoarele etape:\n\n- Liste inițiale: <a href=\"/assets/documente/Liste inițiale.pdf\" download style=\"color: #413B69; text-decoration: underline;\">descarcă PDF</a>\n- Confirmări runda 1: 10-12 mai\n- Redistribuirea locurilor: 14 mai\n- Confirmări runda 2: 14-16 mai\n- Liste finale: 17 mai",
+      "Înscrierea la tabăra de vară se face foarte ușor! Tot ce trebuie să faci este să completezi formularul disponibil pe site-ul nostru în perioada 13 aprilie - 3 mai. După înscriere, urmează următoarele etape:\n\n- Liste inițiale: <a href=\"/assets/documente/Liste inițiale.pdf\" download style=\"color: #413B69; text-decoration: underline;\">Liste inițiale</a>\n- Confirmări runda 1: 10-12 mai\n- Redistribuirea locurilor: 14 mai\n- Confirmări runda 2: 14-16 mai\n- Liste finale: 17 mai",
   },
   {
     question: "Acte necesare pentru înscriere",
@@ -80,12 +80,12 @@ export default function ESU2026() {
               <span className={styles.line2}>18 IULIE - 1 AUGUST</span>
             </h1>
             <a
-              href="https://forms.gle/wZo9khhUAR8KRS5J8"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/assets/documente/Liste inițiale.pdf"
+              download
+              style={{ color: "#413B69", textDecoration: "underline" }}
               className={styles.heroCta}
             >
-              INSCRIE-TE ACUM
+              Liste inițiale
             </a>
           </div>
         </section>
