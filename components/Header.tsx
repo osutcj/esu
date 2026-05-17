@@ -48,11 +48,11 @@ const Header = () => {
         </div>
         <div className={styles.ctaWrapper}>
           <a
-            href="/assets/documente/Liste inițiale.pdf"
+            href="/assets/documente/Liste finale.pdf"
             download
             className={styles.ctaButton}
           >
-            Liste inițiale
+            Liste Finale
           </a>
         </div>
       </nav>

@@ -80,12 +80,12 @@ export default function ESU2026() {
               <span className={styles.line2}>18 IULIE - 1 AUGUST</span>
             </h1>
             <a
-              href="/assets/documente/Liste inițiale.pdf"
+              href="/assets/documente/Liste finale.pdf"
               download
               style={{ color: "#413B69", textDecoration: "underline" }}
               className={styles.heroCta}
             >
-              Liste inițiale
+              Liste Finale
             </a>
           </div>
         </section>
