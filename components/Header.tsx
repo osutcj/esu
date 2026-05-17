@@ -90,11 +90,11 @@ const Header = () => {
           ),
         )}
         <a
-          href="/assets/documente/Liste inițiale.pdf"
+          href="/assets/documente/Liste finale.pdf"
           download
           className={`${styles["sidenav-inscriere"]}${isOpen ? ` ${styles.visible}` : ""}`}
         >
-          Liste inițiale
+          Liste Finale
         </a>
       </div>
     </>
