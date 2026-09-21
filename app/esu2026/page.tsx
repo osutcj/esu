@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import HeroBackground from "@/components/HeroBackground";
 import styles from "./page.module.scss";
 
 const faqData = [
@@ -73,6 +74,10 @@ export default function ESU2026() {
       <Header />
       <main className={styles["main-wrap"]}>
         <section className={styles["hero-section"]}>
+          <HeroBackground
+            src="/assets/images/Banner Page/ESU2026.webp"
+            alt=""
+          />
           <div className={styles.heroContent}>
             <h1 className={styles["hero-title"]}>
               <span className={styles.line1}>ESU 2026</span>

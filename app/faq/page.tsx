@@ -3,6 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import HeroBackground from "@/components/HeroBackground";
 import styles from "./page.module.scss";
 
 const faqData = [
@@ -65,6 +66,10 @@ export default function FAQ() {
       <Header />
       <main className={styles["main-wrap"]}>
         <section className={styles["hero-section"]}>
+          <HeroBackground
+            src="/assets/images/Banner Page/FAQ.webp"
+            alt=""
+          />
           <h1 className={styles["hero-title"]}>
             <span className={styles.line1}>FREQUENTLY ASKED</span>
             <br />

@@ -3,6 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import HeroBackground from "@/components/HeroBackground";
 import styles from "./page.module.scss";
 
 const slideshowImages = [
@@ -60,6 +61,10 @@ export default function Home() {
       <Header />
       <main className={styles["main-wrap"]}>
         <section className={styles["hero-section"]}>
+          <HeroBackground
+            src="/assets/images/Banner Page/MainPage.webp"
+            alt=""
+          />
           <h1 className={styles["hero-title"]}>
             <span className={styles.line1}>ENGINEERING SUMMER</span>
             <br />
@@ -129,21 +134,18 @@ export default function Home() {
             </h2>
           </div>
           <div className={styles["slideshow-container"]}>
-            {slideshowImages.map((img, idx) => (
-              <div
-                key={idx}
-                className={`${styles.slide}${slideIndex === idx ? ` ${styles.active}` : ""}`}
-              >
-                <Image
-                  src={img}
-                  alt={`ESU Slide ${idx + 1}`}
-                  width={1920}
-                  height={1280}
-                  className={styles["slide-img"]}
-                  priority={true}
-                />
-              </div>
-            ))}
+            <div className={`${styles.slide} ${styles.active}`}>
+              <Image
+                key={slideshowImages[slideIndex]}
+                src={slideshowImages[slideIndex]}
+                alt={`ESU Slide ${slideIndex + 1}`}
+                width={1920}
+                height={1280}
+                sizes="(max-width: 768px) 100vw, 70vw"
+                quality={70}
+                className={styles["slide-img"]}
+              />
+            </div>
             <a
               className={`${styles["slide-arrow"]} ${styles.prev}`}
               onClick={() => plusSlides(-1)}

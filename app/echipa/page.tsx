@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import HeroBackground from "@/components/HeroBackground";
 import styles from "./page.module.scss";
 
 const teamMembers = [
@@ -85,6 +86,10 @@ export default function Echipa() {
       <Header />
       <main className={styles["main-wrap"]}>
         <section className={styles["hero-section"]}>
+          <HeroBackground
+            src="/assets/images/Banner Page/Echipa.webp"
+            alt=""
+          />
           <h1 className={styles["hero-title"]}>
             <span className={styles.line1}>MEET THE ESU</span>
             <br />

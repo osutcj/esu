@@ -1,34 +1,19 @@
 "use client";
-import { useState } from "react";
-import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import HeroBackground from "@/components/HeroBackground";
 import styles from "./page.module.scss";
 
-const testimonialImages = [
-  "/assets/images/Testimoniale/testimoniale-01.webp",
-  "/assets/images/Testimoniale/testimoniale-02.webp",
-];
-
 export default function DespreNoi() {
-  const [slideIndex, setSlideIndex] = useState(0);
-
-  const plusSlides = (n: number) => {
-    let newIndex = slideIndex + n;
-    if (newIndex >= testimonialImages.length) newIndex = 0;
-    if (newIndex < 0) newIndex = testimonialImages.length - 1;
-    setSlideIndex(newIndex);
-  };
-
-  const goToSlide = (index: number) => {
-    setSlideIndex(index);
-  };
-
   return (
     <>
       <Header />
       <main className={styles["main-wrap"]}>
         <section className={styles["hero-section"]}>
+          <HeroBackground
+            src="/assets/images/Banner Page/DespreNoi.webp"
+            alt=""
+          />
           <h1 className={styles["hero-title"]}>DESPRE NOI</h1>
         </section>
 
